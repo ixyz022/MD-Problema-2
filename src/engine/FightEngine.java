@@ -1,7 +1,7 @@
 package engine;
 
-import fighters.characters.ChoroPortenho;
-import fighters.characters.MineroWarrior;
+import fighters.ChoroPortenho;
+import fighters.MineroWarrior;
 
 import java.util.Scanner;
 
