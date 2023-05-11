@@ -1,3 +1,8 @@
+package engine;
+
+import fighters.characters.ChoroPortenho;
+import fighters.characters.MineroWarrior;
+
 import java.util.Scanner;
 
 public class FightEngine {

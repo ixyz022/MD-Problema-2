@@ -1,3 +1,4 @@
+package fighters.characters;
 
 public class ChoroPortenho {
 	

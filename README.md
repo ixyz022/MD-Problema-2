@@ -22,11 +22,11 @@ http://dofactory.com/net/design-patterns
 Invente tres requerimientos para nuestro juego Extreme Fighter, que para ser resuelto requiera utilizar tres patrones de diseño GoF: Uno creacional, uno de comportamiento y uno de estructura. Debe plantear el cambio de requerimiento según el ejemplo siguiente:
 
 #### Ficha de requerimiento
-| Requerimiento | Problema | Solución | Patrón a aplicar |
-| --- | --- | --- | --- |
-| Cada personaje parte equipado con un casco, una armadura y una espada, existiendo distintos tipos de cascos, armaduras y espadas. | La construcción de un luchador requiere una lógica específica por cada uno de ellos, correspondiente al ensamble de distintos componentes. | Crear una abstracción para la creación de luchadores | Abstract Factory |
-| Requerimiento 2 | Problema 2 | Solución 2 | Patrón 2 |
-| Requerimiento 3 | Problema 3 | Solución 3 | Patrón 3 |
+| Requerimiento | Problema | Solución | Patrón a aplicar                |
+| --- | --- | --- |---------------------------------|
+| El juego necesita un sistema de niveles que se desbloqueen al completar el nivel anterior. | Se necesita un mecanismo para organizar los niveles en una estructura jerárquica y controlar el acceso a los mismos. | Utilizar el patrón de diseño de estructura Composite para organizar los niveles en una estructura jerárquica y controlar el acceso a los mismos, el patrón creacional Factory Method para crear instancias de niveles según la posición que ocupen en la estructura jerárquica y el patrón conductual State para representar el estado de cada nivel (desbloqueado o bloqueado). | Factory Method Composite  State |
+| El juego necesita una forma de crear nuevos personajes que puedan tener diferentes habilidades y atributos. | Cada personaje es único y tiene diferentes combinaciones de habilidades y atributos, lo que hace que la creación de objetos sea difícil y requiere mucho código duplicado. | Utilizar el patrón de diseño de estructura Composite para organizar los niveles en una estructura jerárquica y controlar el acceso a los mismos, el patrón creacional Factory Method para crear instancias de niveles según la posición que ocupen en la estructura jerárquica y el patrón conductual State para representar el estado de cada nivel (desbloqueado o bloqueado). | Builder                         |
+| Requerimiento 3 | Problema 3 | Solución 3 | Patrón 3                        |
 
 ##### Diagrama UML	 
 Acá deben poner el diagrama de su solución, por ejemplo, en vez de Client, Fight Engine, y los nombres del resto de clases que correspondan.
