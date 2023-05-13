@@ -19,7 +19,7 @@ En la URL siguiente, encontrará ejemplos de los patrones de diseño GoF en C#. 
 http://dofactory.com/net/design-patterns
 
 ### 2. Actividad de evaluación: parte 1
-Invente tres requerimientos para nuestro juego Extreme Fighter, que para ser resuelto requiera utilizar tres patrones de diseño GoF: Uno creacional, uno de comportamiento y uno de estructura. Debe plantear el cambio de requerimiento según el ejemplo siguiente:
+Invente tres requerimiento1 para nuestro juego Extreme Fighter, que para ser resuelto requiera utilizar tres patrones de diseño GoF: Uno creacional, uno de comportamiento y uno de estructura. Debe plantear el cambio de requerimiento según el ejemplo siguiente:
 
 #### Ficha de requerimiento
 | Requerimiento | Problema | Solución | Patrón a aplicar                |
@@ -36,4 +36,4 @@ Diagramas en herramienta UML:
 - Visual Paradigm: https://www.visual-paradigm.com/
 
 ### 3. Entregas:
-Semana del 17/05: propuestas de requerimientos para feedback
+Semana del 17/05: propuestas de requerimiento1 para feedback
