@@ -22,18 +22,23 @@ http://dofactory.com/net/design-patterns
 Invente tres requerimiento1 para nuestro juego Extreme Fighter, que para ser resuelto requiera utilizar tres patrones de diseño GoF: Uno creacional, uno de comportamiento y uno de estructura. Debe plantear el cambio de requerimiento según el ejemplo siguiente:
 
 #### Ficha de requerimiento
-| Requerimiento | Problema | Solución | Patrón a aplicar                |
-| --- | --- | --- |---------------------------------|
-| El juego necesita un sistema de niveles que se desbloqueen al completar el nivel anterior. | Se necesita un mecanismo para organizar los niveles en una estructura jerárquica y controlar el acceso a los mismos. | Utilizar el patrón de diseño de estructura Composite para organizar los niveles en una estructura jerárquica y controlar el acceso a los mismos, el patrón creacional Factory Method para crear instancias de niveles según la posición que ocupen en la estructura jerárquica y el patrón conductual State para representar el estado de cada nivel (desbloqueado o bloqueado). | Factory Method Composite  State |
-| El juego necesita una forma de crear nuevos personajes que puedan tener diferentes habilidades y atributos. | Cada personaje es único y tiene diferentes combinaciones de habilidades y atributos, lo que hace que la creación de objetos sea difícil y requiere mucho código duplicado. | Utilizar el patrón de diseño de estructura Composite para organizar los niveles en una estructura jerárquica y controlar el acceso a los mismos, el patrón creacional Factory Method para crear instancias de niveles según la posición que ocupen en la estructura jerárquica y el patrón conductual State para representar el estado de cada nivel (desbloqueado o bloqueado). | Builder                         |
-| Requerimiento 3 | Problema 3 | Solución 3 | Patrón 3                        |
+| Requerimiento                                      | Problema                                                                                                                                                                                                                                         | Solución                                                                                                                                                                                                                                                                                                                                                                                       | Patrón a aplicar |
+|----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---|
+| Integrar diferentes sistemas de sonido en el juego | El juego necesita reproducir efectos de sonido para las acciones del jugador y otros eventos importantes en el juego, pero existen diferentes sistemas de sonido de terceros que podrían ser utilizados y cada uno tiene una interfaz diferente. | Implementar el patrón de diseño "Adapter" para integrar diferentes sistemas de sonido en el juego. Se creará una interfaz llamada "SistemaSonido" que represente la funcionalidad del sistema de sonido del juego. Luego, se creará una clase "SistemaSonidoAdapter" que actúe como un adaptador entre la interfaz "SistemaSonido" y diferentes sistemas de sonido de terceros, como mp3, etc. | Patrón de diseño "Adapter". |
+| -                                                  | -                                                                                                                                                                                      | -                                                                                                                                                                                                                                                                                                                                                                                              | - |
+| Requerimiento 3                                    | Problema 3                                                                                                                                                                                                                                       | Solución 3                                                                                                                                                                                                                                                                                                                                                                                     | Patrón 3 |
 
-##### Diagrama UML	 
+### Diagramas UML
+
+#### Requerimiento 1
+![Requerimiento_1](images/PatronAdaptativo.png)
+
+### 3. Entregas:
+Semana del 17/05: propuestas de requerimiento1 para feedback
+
+### Herramientas para Diagramar UML
 Acá deben poner el diagrama de su solución, por ejemplo, en vez de Client, Fight Engine, y los nombres del resto de clases que correspondan.
 Diagramas en herramienta UML:
 - http://staruml.io/
 - Enterprise Architect: http://sparxsystems.com/products/ea/
 - Visual Paradigm: https://www.visual-paradigm.com/
-
-### 3. Entregas:
-Semana del 17/05: propuestas de requerimiento1 para feedback
