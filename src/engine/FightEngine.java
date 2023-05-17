@@ -8,11 +8,17 @@ import requerimiento1.sonidos.PatadaSonidoAdapter;
 import requerimiento1.sonidos.SaltoSonidoAdapter;
 import requerimiento2.FighterFactory;
 import requerimiento3.Game;
+import requerimiento3.GameState;
+import requerimiento3.Memento;
 
 import java.util.Scanner;
 
 public class FightEngine {
-	public FightEngine(Game game){
+	private Game game; // Referencia al objeto Game
+
+	public FightEngine(Game game) {
+		this.game = game;
+
 		// Declaracion de sonidos
 		SistemaSonido golpeSonido = new GolpeSonidoAdapter();
 		SistemaSonido lanzarPoder = new LanzarPoderSonidoAdapter();
@@ -34,6 +40,11 @@ public class FightEngine {
 		System.out.println("Ingresa tu acción! :1-Golpe 2-Patada 3-Salto 4-LANZAR PODER");
 		String accionLuchadorIn = seleccion.nextLine();
 		int accionLuchador = Integer.parseInt(accionLuchadorIn);
+
+		// Crear instancia de GameState y Memento
+		GameState currentState = new GameState(luchadorPlayer1, accionLuchador);
+		Memento memento = new Memento(currentState);
+
 		switch (accionLuchador) {
 			case 1 -> {
 				System.out.println(player1.golpear());
@@ -57,6 +68,9 @@ public class FightEngine {
 				lanzarPoder.reproducirEfecto();
 			}
 		}
+
+		// Guardar el estado del juego utilizando el memento
+		game.saveGame(memento);
 
 		System.out.println("FIN DEL JUEGO. 2...");
 	}

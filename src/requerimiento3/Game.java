@@ -9,8 +9,8 @@ public class Game {
     private GameState currentState;
 
     // Método para guardar el estado del juego
-    public void saveGame() {
-        Memento memento = new Memento(currentState);
+    public void saveGame(Memento memento) {
+        memento = new Memento(currentState);
         mementos.add(memento);
     }
 
