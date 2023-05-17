@@ -1,6 +1,6 @@
 package fighters;
 
-public class MineroWarrior implements Fighter{
+public class MineroWarrior implements Fighter {
 
     @Override
     public String golpear(){
