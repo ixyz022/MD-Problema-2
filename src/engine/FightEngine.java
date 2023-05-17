@@ -52,7 +52,7 @@ public class FightEngine {
 				case 2 -> {
 					System.out.println(player1CP.patear());
 					// Reproducir un efecto de sonido
-					lanzarPoder.reproducirEfecto();
+					patadaSonidoAdapter.reproducirEfecto();
 				}
 				case 3 -> {
 					System.out.println(player1CP.saltar());
