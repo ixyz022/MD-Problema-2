@@ -7,11 +7,12 @@ import requerimiento1.sonidos.LanzarPoderSonidoAdapter;
 import requerimiento1.sonidos.PatadaSonidoAdapter;
 import requerimiento1.sonidos.SaltoSonidoAdapter;
 import requerimiento2.FighterFactory;
+import requerimiento3.Game;
 
 import java.util.Scanner;
 
 public class FightEngine {
-	public FightEngine(){
+	public FightEngine(Game game){
 		// Declaracion de sonidos
 		SistemaSonido golpeSonido = new GolpeSonidoAdapter();
 		SistemaSonido lanzarPoder = new LanzarPoderSonidoAdapter();
