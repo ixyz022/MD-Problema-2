@@ -17,8 +17,6 @@ public class FightEngine {
 		SistemaSonido lanzarPoder = new LanzarPoderSonidoAdapter();
 		SistemaSonido patadaSonidoAdapter = new PatadaSonidoAdapter();
 		SistemaSonido saltoSonidoAdapter = new SaltoSonidoAdapter();
-		String opcionChoroPortenho = "1";
-		String opcionMineroWarrior = "2";
 
 		System.out.println("Empieza el juego!!!");
 		System.out.println("Selecciona tu luchador (1 o 2): 1-Choro Portenho 2-Minero Warrior ");
@@ -35,36 +33,30 @@ public class FightEngine {
 		System.out.println("Ingresa tu acción! :1-Golpe 2-Patada 3-Salto 4-LANZAR PODER");
 		String accionLuchadorIn = seleccion.nextLine();
 		int accionLuchador = Integer.parseInt(accionLuchadorIn);
+		switch (accionLuchador) {
+			case 1 -> {
+				System.out.println(player1.golpear());
+				// Reproducir un efecto de sonido
+				golpeSonido.reproducirEfecto();
+			}
 
-		if (luchadorPlayer1.equals(opcionChoroPortenho)){
-
-			switch (accionLuchador) {
-				case 1 -> {
-					System.out.println(player1.golpear());
-					// Reproducir un efecto de sonido
-					golpeSonido.reproducirEfecto();
-				}
-
-				case 2 -> {
-					System.out.println(player1.patear());
-					// Reproducir un efecto de sonido
-					patadaSonidoAdapter.reproducirEfecto();
-				}
-				case 3 -> {
-					System.out.println(player1.saltar());
-					// Reproducir un efecto de sonido
-					saltoSonidoAdapter.reproducirEfecto();
-				}
-				case 4 -> {
-					System.out.println(player1.lanzarPoder());
-					// Reproducir un efecto de sonido
-					lanzarPoder.reproducirEfecto();
-				}
+			case 2 -> {
+				System.out.println(player1.patear());
+				// Reproducir un efecto de sonido
+				patadaSonidoAdapter.reproducirEfecto();
+			}
+			case 3 -> {
+				System.out.println(player1.saltar());
+				// Reproducir un efecto de sonido
+				saltoSonidoAdapter.reproducirEfecto();
+			}
+			case 4 -> {
+				System.out.println(player1.lanzarPoder());
+				// Reproducir un efecto de sonido
+				lanzarPoder.reproducirEfecto();
 			}
 		}
 
 		System.out.println("FIN DEL JUEGO. 2...");
-
 	}
-
 }
