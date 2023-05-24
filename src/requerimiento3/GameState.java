@@ -1,6 +1,8 @@
 package requerimiento3;
 
-public class GameState {
+import java.io.Serializable;
+
+public class GameState implements Serializable {
     private String playerName;
     private int score;
 
